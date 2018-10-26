@@ -1,19 +1,23 @@
 # SphinxContrib RunCmd
 
+[![Build Status](https://travis-ci.org/invenia/sphinxcontrib-runcmd.svg?branch=master)]()
+[![Coverage Status](https://coveralls.io/repos/github/invenia/sphinxcontrib-runcmd/badge.svg?branch=master)]()
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 Sphinx RunCmd aims to allow you to place the output of arbitrary commands in your rst files, while also giving you greater flexibility in how the output is formatted.
 
 ## Installation
 
-Install with pip:
+sphinxcontrib-runcmd is available on PyPI. To install:
+
 ```sh
-pip install sphinxcontrib-runcmd
+$ pip install sphinxcontrib-runcmd
 ```
 
 Note: Not actually on PyPI yet, so this won't work.
 
 ## How to Add to Project
+
 First you'll want to add `sphinxcontrib.runcmd` to your `conf.py` file in your docs folder:
 
 ```python
@@ -27,7 +31,7 @@ From there, all you need to do is use `runcmd` as a directive in your documentat
    :prompt:
 ```
 
-## runcmd Options
+## Options
 
 This directive is basically a sub-directive of `code-block`, so it has all of code blocks directives such as:
  - linenos
@@ -48,7 +52,7 @@ This directive builds upon that and adds the following:
  - dedent-output: int
   - Will dedent the output only by the int value you specify. Will not dedent the prompt if specified. Be careful, because the `code-block` dedent will be applied on top of this dedent if both are set in the options.
 
-### Replace Regex Info
+### Replace Option
 
 The `replace` option uses the `CSV` package to parse the string, thus you can wrap your replacements in double quotes if you want to use commas and whatnot.
 
@@ -62,3 +66,7 @@ You also need to double escape any forward slashes, but you can single escape qu
 The first replacement will replace `this/is/a/path` with `now/its/another/path`.
 
 The second replacement will replace `"` with `'`.
+
+## License
+
+sphinxcontrib-runcmd is provided under an MIT License.
