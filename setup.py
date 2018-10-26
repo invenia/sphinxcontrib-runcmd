@@ -2,7 +2,7 @@ import codecs
 
 from setuptools import find_packages, setup
 
-TEST_DEPS = ["coverage", "pytest", "pytest-cov", "sphinx_testing"]
+TEST_DEPS = ["coverage", "pytest", "pytest-cov", "python-coveralls", "sphinx_testing"]
 
 EXTRAS = {"test": TEST_DEPS}
 
