@@ -8,14 +8,15 @@ EXTRAS = {"test": TEST_DEPS}
 
 setup(
     name="sphinxcontrib-runcmd",
-    version="0.1.0",
+    version="0.1.3",
     author="Fernando Chorney",
     author_email="fernando.chorney@invenia.ca",
     url="https://github.com/invenia/sphinxcontrib-runcmd",
-    download_url="",
+    download_url="https://pypi.org/project/sphinxcontrib-runcmd",
     license="MIT",
     description='Sphinx "runcmd" extension',
     long_description=codecs.open("README.md", "r", "utf-8").read(),
+    long_description_content_type="text/markdown",
     zip_safe=False,
     packages=find_packages(exclude=["tests"]),
     include_package_data=True,

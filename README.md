@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/invenia/sphinxcontrib-runcmd.svg?branch=master)]()
 [![Coverage Status](https://coveralls.io/repos/github/invenia/sphinxcontrib-runcmd/badge.svg?branch=master)]()
+[![Pip Version](https://img.shields.io/pypi/v/sphinxcontrib-runcmd.svg)](https://pypi.org/project/sphinxcontrib-runcmd)
+[![Python Version](https://img.shields.io/badge/python-3.6-blue.svg)]()
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 Sphinx RunCmd aims to allow you to place the output of arbitrary commands in your rst files, while also giving you greater flexibility in how the output is formatted.
@@ -14,9 +16,7 @@ sphinxcontrib-runcmd is available on PyPI. To install:
 $ pip install sphinxcontrib-runcmd
 ```
 
-Note: Not actually on PyPI yet, so this won't work.
-
-## How to Add to Project
+## Add runcmd to your Project
 
 First you'll want to add `sphinxcontrib.runcmd` to your `conf.py` file in your docs folder:
 
