@@ -44,13 +44,13 @@ This directive is basically a sub-directive of `code-block`, so it has all of co
 
 This directive builds upon that and adds the following:
  - syntax: str
-  - Since we're using the arguments section for a command we can't actually pass the syntax we want to the `code-block` in the arguments. Therefore you can set it in the options which will then get passed into the `code-block` to colorize your commands output.
+   - Since we're using the arguments section for a command we can't actually pass the syntax we want to the `code-block` in the arguments. Therefore you can set it in the options which will then get passed into the `code-block` to colorize your commands output.
  - replace: str
-  - Takes in a comma separated list of regex `pattern/replace,pattern/replace` and applies it to the output in that order.
+   - Takes in a comma separated list of regex `pattern/replace,pattern/replace` and applies it to the output in that order.
  - prompt: bool
-  - Display the command prompt in the output
+   - Display the command prompt in the output
  - dedent-output: int
-  - Will dedent the output only by the int value you specify. Will not dedent the prompt if specified. Be careful, because the `code-block` dedent will be applied on top of this dedent if both are set in the options.
+   - Will dedent the output only by the int value you specify. Will not dedent the prompt if specified. Be careful, because the `code-block` dedent will be applied on top of this dedent if both are set in the options.
 
 ### Replace Option
 

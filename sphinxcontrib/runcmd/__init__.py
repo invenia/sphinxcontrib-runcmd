@@ -9,13 +9,13 @@ from sphinx.directives import code
 
 from .utils import Singleton
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 
 # CONSTANTS
 RE_SPLIT = re.compile(r"(?P<pattern>.*)(?<!\\)/(?P<replacement>.*)")
 
 
-class CMDCache(Singleton):  # noqa: E999
+class CMDCache(Singleton):
     cache = {}
 
     def get(self, cmd):
