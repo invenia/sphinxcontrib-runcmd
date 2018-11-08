@@ -1,7 +1,7 @@
 from sphinxcontrib.runcmd.utils import Singleton
 
 
-class TheSingleton(object, metaclass=Singleton):  # noqa: E999
+class TheSingleton(Singleton):
     pass
 
 

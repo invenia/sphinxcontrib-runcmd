@@ -15,8 +15,7 @@ __version__ = "0.1.0"
 RE_SPLIT = re.compile(r"(?P<pattern>.*)(?<!\\)/(?P<replacement>.*)")
 
 
-class CMDCache(object, metaclass=Singleton):  # noqa: E999
-    __metaclass__ = Singleton
+class CMDCache(Singleton):  # noqa: E999
     cache = {}
 
     def get(self, cmd):
@@ -32,16 +31,17 @@ class CMDCache(object, metaclass=Singleton):  # noqa: E999
 def run_command(command):
     true_cmd = shlex.split(command)
     try:
-        result = subprocess.run(
+        subp = subprocess.Popen(
             true_cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE
         )
     except Exception as e:
         out = ""
         err = e
     else:
+        out, err = subp.communicate()
         encoding = sys.getfilesystemencoding()
-        out = result.stdout.decode(encoding, "replace").rstrip()
-        err = result.stderr.decode(encoding, "replace").rstrip()
+        out = out.decode(encoding, "replace").rstrip()
+        err = err.decode(encoding, "replace").rstrip()
 
     if err and err != "":
         print("Error in runcmd: {}".format(err))
@@ -109,7 +109,7 @@ class RunCmdDirective(code.CodeBlock):
         # Set up our arguments to run the CodeBlock parent run function
         self.arguments[0] = syntax
         self.content = [output]
-        node = super().run()
+        node = super(RunCmdDirective, self).run()
 
         return node
 
