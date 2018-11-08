@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/invenia/sphinxcontrib-runcmd.svg?branch=master)](https://travis-ci.org/invenia/sphinxcontrib-runcmd?branch=master)
 [![Coverage Status](https://coveralls.io/repos/github/invenia/sphinxcontrib-runcmd/badge.svg?branch=master)](https://coveralls.io/github/invenia/sphinxcontrib-runcmd)
 [![Pip Version](https://img.shields.io/pypi/v/sphinxcontrib-runcmd.svg)](https://pypi.org/project/sphinxcontrib-runcmd)
-[![Python Version](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org/)
+[![Python Version](https://img.shields.io/badge/python-2.7%20%7C%203.6-blue.svg)](https://www.python.org/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 Sphinx RunCmd aims to allow you to place the output of arbitrary commands in your rst files, while also giving you greater flexibility in how the output is formatted.
