@@ -1,6 +1,6 @@
 import codecs
 
-from setuptools import find_packages, setup
+from setuptools import find_namespace_packages, setup
 
 TEST_DEPS = ["coverage", "pytest", "pytest-cov", "sphinx_testing"]
 
@@ -18,7 +18,7 @@ setup(
     long_description=codecs.open("README.md", "r", "utf-8").read(),
     long_description_content_type="text/markdown",
     zip_safe=False,
-    packages=find_packages(exclude=["tests"]),
+    packages=find_namespace_packages(exclude=["tests"]),
     include_package_data=True,
     install_requires=["sphinx"],
     classifiers=[
@@ -37,5 +37,4 @@ setup(
     platforms="any",
     test_require=TEST_DEPS,
     extras_require=EXTRAS,
-    namespace_packages=["sphinxcontrib"],
 )
